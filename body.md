@@ -12,6 +12,7 @@ Dokumentationen specificerar:
 
 ## Snabba fakta
 För dig som inväntar en tl;dr kommer här en (mycket) kort sammanfattning:
+
 * Det är Datasektionens nämnd IOR (Informationsorganet), närmare bestämt dess gren *Crash 'n' Bränn*, som har hand om IT på sektionen.
 * Du är hjärtligt välkommen att utveckla, speca, testa, designa eller på annat sätt bidra, antingen när du själv har tid och lust eller på någon av våra hackerkvällar i datorsal Grå (E-huset, plan 5, torsdagar 17-).
 * Allt hostas eller ska hostas på [GitHub](https://github.com/datasektionen) (inkl. denna dokumentation)
@@ -25,20 +26,35 @@ För dig som inväntar en tl;dr kommer här en (mycket) kort sammanfattning:
 ## Hur dokumentationen fungerar
 Dokumentationen är relativt simpelt uppbyggd. All dokumentation ligger i [Docs-repositoryt på GitHub](https://github.com/datasektionen/Docs), där detta dokument är rotdokument.
 
-Varje dokument består av en huvudrubrik (h1, kan skrivas med #- eller ===-syntax), följt av lämpliga underrubriker med brödtext. Huvudrubriken (max en får förekomma) blir dokumentets titel, så _håll den kort och koncis_.
+Varje dokument består av tre filer: body.md, sidebar.md och meta.toml. Body.md innehåller dokumentets brödtext och innehåll. Sidebar.md innehåller kompletterande information som lämpligast läggs i just en sidebar. Titeln på sidan specificeras i meta.toml-filen som kompletterar varje body.md och sidebar.md-filpar.
 
-Den faktiska dokumentationen ligger sedan som Markdown-dokument i undermappar. Varje undermapp har en index.md-fil som blir avdelningens introducerande dokument. Strukturen är alltså
+All dokumentation ligger enligt denna struktur i undermappar. Strukturen är alltså
 
-	index.md
-	- ui
-	  * index.md
-	  * framework.md
-	  * typography.md
+	body.md <- detta dokument du läser just nu
+	sidebar.md
+	meta.toml
+	* ui/
+	  - body.md
+	  - sidebar.md
+	  - meta.toml
+	  * framework/
+	  	- body.md
+	  	- sidebar.md
+	  	- meta.toml
+	  * typography/
+	  	- body.md
+	  	- sidebar.md
+	  	- meta.toml
 	  * ...
-	- system
-	  * methone.md
-	  * aurora.md
-	  * hyperion.md
-	  * ...
+	* system/
+	  * body.md
+	  * sidebar.md
+	  * meta.toml
+	  - methone/
+	  - aurora/
+	  - hyperion/
+	  - ...
  
- Dokumentationssiten (Aurora) är en ASP.NET 5-app som läser Docs-repot enligt strukturen ovan, och parsar denna till vår dokumentationssite. För att lägga till, eller ändra dokumentation gör du lämpligast en pull request till Docs-repositoryt. Har du synpunkter på dokumentationen, eller vill se tillägg, är du välkommen att skapa en issue i Docs-repot. Dokumentationen bör i huvudsak vara på svenska, även om engelsk dokumentation förstås är mycket bättre än ingen alls.
+Dokumentationssiten är [Taitan](https://github.com/datasektionen/taitan) + [Gloo](https://github.com/datasektionen/gloo), två appar som 1. läser Docs-repot enligt strukturen ovan, och parsar denna till JSON 2. skickar denna JSON-data till en view engine för rendering till slutanvändare.
+
+För att lägga till, eller ändra dokumentation gör du lämpligast en pull request till Docs-repositoryt. Har du synpunkter på dokumentationen, eller vill se tillägg, är du välkommen att skapa en issue i Docs-repot. Dokumentationen bör i huvudsak vara på svenska, även om engelsk dokumentation förstås är mycket bättre än ingen alls.
