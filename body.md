@@ -1,7 +1,7 @@
 # Dokumentation
 
 ## Samlad dokumentation för Datasektionens system, verktyg och miljö
-På den här sidan (och det motsvarande GitHub-repositoryt) finns dokumentation för dig som jobbar med eller är intresserad av IT på Datasektionen vid THS.
+På den här sidan (och det motsvarande GitHub-repositoryt) finns dokumentation för dig som jobbar med eller är intresserad av IT på Datasektionen.
 
 Dokumentationen specificerar:
 * hur du utvecklar i vår tekniska miljö,
