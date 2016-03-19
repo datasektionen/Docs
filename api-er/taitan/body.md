@@ -56,8 +56,6 @@ För att hämta ett dokument med tillhörande metadata:
 
 `GET /:path`
 
-Exempelvis
-
 ## Exempelrespons
 
 ```json
