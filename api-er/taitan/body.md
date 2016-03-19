@@ -80,16 +80,16 @@ Exempelvis
 
 Förklaring av responsens olika fält:
 
-|  Attribut  |                                                                                        Förklaring                                                                                       |         Data-format        |
-|:----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
-| title      | Title från meta.toml                                                                                                                                                                    | string                     |
-| slug       | Den URL-slug som efterfrågats, exempelvis `/api-er/methone`                                                                                                                             | string (URL slug)          |
-| updated_at | Datum och tid då body.md uppdaterades                                                                                                                                                   | ISO 8601                   |
-| image      | URL till ev. bildfil för dokumentet, från meta.toml                                                                                                                                     | URL                        |
-| body       |                                                                                                                                                                                         | HTML                       |
-| sidebar    |                                                                                                                                                                                         | HTML                       |
-| anchors    | Array med objekt bestående av id (HTML anchor-id, ex. #om-oss) samt titel (Om oss) som länkar till olika delar av dokumentet (baseras på nivå 2-headings, dvs `##` eller --- i Markdown | Object i array             |
-| children   | Array med sidor som kan läggas i navigationsmeny, i form av objekt bestående av slug samt sidtitel. Varje objekt kan också ha en children-key, med samma utseende (rekursivt)           | Object i array (rekursivt) |
+|  Attribut  |                                                                                        Förklaring                                                                                       |
+|:----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| title      | Title från meta.toml                                                                                                                                                                    |
+| slug       | Den URL-slug som efterfrågats, exempelvis `/api-er/methone`                                                                                                                             |
+| updated_at | Datum och tid då body.md uppdaterades, specificerad enligt ISO 8601-standarde                                                                                                           |
+| image      | URL till ev. bildfil för dokumentet, från meta.toml                                                                                                                                     |
+| body       | Data från body.md, HTML-konverterad                                                                                                                                                     |
+| sidebar    | Data från sidebar.md, HTML-konverterad                                                                                                                                                  |
+| anchors    | Array med objekt bestående av id (HTML anchor-id, ex. #om-oss) samt titel (Om oss) som länkar till olika delar av dokumentet (baseras på nivå 2-headings, dvs `##` eller --- i Markdown |
+| children   | Array med sidor som kan läggas i navigationsmeny, i form av objekt bestående av slug samt sidtitel. Varje objekt kan också ha en children-key, med samma utseende (rekursivt)           |
 
 ## Kör och utveckla lokalt
 
