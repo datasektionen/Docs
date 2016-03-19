@@ -1,5 +1,5 @@
-Taitan
-=====
+Taitan (API)
+============
 
 Taitan är det system som tar hand om "översättningen" från Markdown-dokument
 som ligger på GitHub, till ett HTTP RESTful JSON API som går att hämta data från.
