@@ -116,7 +116,7 @@ någorlunda isolerad från resten av systemet, är detta inget problem.
 Taitan kräver att två environment-variabler är satta vid körning:
 
 | Variabelnamn |                                           Värde/förklaring                                          |
-|:------------:|:---------------------------------------------------------------------------------------------------:|
+|--------------|-----------------------------------------------------------------------------------------------------|
 | CONTENT_URL  | URL till Git-repo; exempelvis https://github.com/dsekt/docs.git                                     |
 | TOKEN        | Token från GitHub, genereras under Settings > Personal access tokens. Välj public_repo-rättigheten. |
 
