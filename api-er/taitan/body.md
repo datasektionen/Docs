@@ -121,10 +121,13 @@ Taitan kräver att två environment-variabler är satta vid körning:
 #### Webhooks
 
 För att Taitan ska få notifieringar när ett repo uppdateras behöver man lägga till
-en webhook till sin Taitan-installation under (repo) > Settings > Webhooks.
+en webhook till sin Taitan-installation under (ditt content-repo) > Settings > Webhooks.
 
-Tryck på Add Webhook.
-Om din Taitan-instans ligger på `http://styrdokument-taitan.datasektionen.se`, fyller
-du i denna URL under `Payload URL`. Content-type ska vara JSON, Secret key kan lämnas tom,
-välj `Just the push event` under event-valet och spara. Detta pingar Taitan så fort
-en push görs till GitHub-repot, så att Taitan-datan alltid är uppdaterad.
+1. Tryck på Add Webhook
+2. Om din Taitan-instans ligger på `http://styrdokument-taitan.datasektionen.se`, fyller du i denna URL under `Payload URL`
+3. Content-type ska vara JSON
+4. Secret key kan lämnas tom
+5. `Just the push event` under event-valet och spara.
+
+Detta pingar Taitan så fort en push görs till GitHub-repot,
+så att Taitan-datan alltid är uppdaterad.
